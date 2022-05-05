@@ -1,0 +1,10 @@
+BEGIN;
+
+ALTER TABLE phone_calls
+    DROP COLUMN email,
+    DROP COLUMN called_count;
+
+DROP EXTENSION IF EXISTS citext;
+DROP DOMAIN IF EXISTS email;
+
+COMMIT;
